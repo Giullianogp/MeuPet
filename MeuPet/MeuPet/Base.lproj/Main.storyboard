@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ToW-Rs-lla">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MeuPet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,134 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="petlogo" translatesAutoresizingMaskIntoConstraints="NO" id="EnP-Z1-whR">
+                                <rect key="frame" x="67" y="72" width="240" height="184"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuário" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lfK-Q1-Ydd">
+                                <rect key="frame" x="67" y="318" width="240" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SY7-bn-4qM">
+                                <rect key="frame" x="67" y="356" width="240" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGg-G6-Dnk">
+                                <rect key="frame" x="137" y="394" width="99" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="99" id="2RJ-La-OJy"/>
+                                </constraints>
+                                <state key="normal" title="Entrar"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SY7-bn-4qM" firstAttribute="centerX" secondItem="YGg-G6-Dnk" secondAttribute="centerX" id="0xU-f6-Rkh"/>
+                            <constraint firstItem="lfK-Q1-Ydd" firstAttribute="leading" secondItem="SY7-bn-4qM" secondAttribute="leading" id="6Qk-Fg-3zR"/>
+                            <constraint firstItem="lfK-Q1-Ydd" firstAttribute="trailing" secondItem="SY7-bn-4qM" secondAttribute="trailing" id="Ed7-CD-Wnb"/>
+                            <constraint firstItem="EnP-Z1-whR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aBL-Ad-v3b"/>
+                            <constraint firstItem="YGg-G6-Dnk" firstAttribute="top" secondItem="SY7-bn-4qM" secondAttribute="bottom" constant="8" symbolic="YES" id="gGn-EV-ukp"/>
+                            <constraint firstItem="EnP-Z1-whR" firstAttribute="trailing" secondItem="lfK-Q1-Ydd" secondAttribute="trailing" id="klm-pH-eOd"/>
+                            <constraint firstItem="EnP-Z1-whR" firstAttribute="leading" secondItem="lfK-Q1-Ydd" secondAttribute="leading" id="l3w-BV-4Et"/>
+                            <constraint firstItem="lfK-Q1-Ydd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lcA-Xy-C8a"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YGg-G6-Dnk" secondAttribute="bottom" constant="243" id="mIf-ka-N0C"/>
+                            <constraint firstItem="lfK-Q1-Ydd" firstAttribute="top" secondItem="EnP-Z1-whR" secondAttribute="bottom" constant="62" id="o0A-LX-RaG"/>
+                            <constraint firstItem="EnP-Z1-whR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="pre-bb-HHD"/>
+                            <constraint firstItem="EnP-Z1-whR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="uDo-xG-GRF"/>
+                            <constraint firstItem="SY7-bn-4qM" firstAttribute="top" secondItem="lfK-Q1-Ydd" secondAttribute="bottom" constant="8" symbolic="YES" id="xHj-gq-JUF"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="sGc-af-mbC"/>
+                    <connections>
+                        <segue destination="mbE-ex-oFE" kind="show" id="yFA-gR-E7E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-42.399999999999999" y="-634.632683658171"/>
+        </scene>
+        <!--Doação-->
+        <scene sceneID="jEo-Js-9Cj">
+            <objects>
+                <viewController id="dCB-d7-cO4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fAC-88-0ge"/>
+                        <viewControllerLayoutGuide type="bottom" id="uiX-6S-UCf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FCY-SU-RZN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Doação" image="donate" id="z42-mp-bnV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IaF-gw-Z1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1679" y="-305"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="UkJ-tU-RjK">
+            <objects>
+                <viewController id="5ii-9i-Hmf" customClass="HomeController" customModule="MeuPet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VBm-7o-9Mf"/>
+                        <viewControllerLayoutGuide type="bottom" id="AHf-VI-mvY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BW2-jF-8XK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="pet" id="TwI-fU-FwJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D6r-eK-mAz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1679" y="-960"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Q0d-8O-FIG">
+            <objects>
+                <tabBarController id="mbE-ex-oFE" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="b6w-Kp-qCw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="5ii-9i-Hmf" kind="relationship" relationship="viewControllers" id="1Qi-sW-OEZ"/>
+                        <segue destination="dCB-d7-cO4" kind="relationship" relationship="viewControllers" id="V6d-5f-xYn"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rdw-0c-Xwm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="726" y="-633"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eQq-S5-3Qh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ToW-Rs-lla" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FQ4-YL-bsB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TGf-ZK-GS8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wqu-6i-OXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-825" y="-634"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="donate" width="25" height="25"/>
+        <image name="pet" width="25" height="25"/>
+        <image name="petlogo" width="100" height="100"/>
+    </resources>
 </document>
