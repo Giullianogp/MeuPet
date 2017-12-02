@@ -37,6 +37,7 @@ class LoginViewController: UIViewController {
             messageInfo.text = " "
         }
         
+        print("teste")
         
 
         performSegue(withIdentifier: "segueLogin", sender: sender)
