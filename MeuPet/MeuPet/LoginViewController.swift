@@ -38,15 +38,7 @@ class LoginViewController: UIViewController {
         }
         
         
-        //let parameters: [String: Any] = [
-        //"login" : "",
-        //"senha" : "iosclient"
-        //]
-        
-        //Alamofire.request("https://httpbin.org/get", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
-            
-        //}
-        
+
         performSegue(withIdentifier: "segueLogin", sender: sender)
     
     }
