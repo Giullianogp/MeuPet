@@ -13,11 +13,18 @@ import Alamofire
 protocol AsyncDelegate {
     func done()
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 995be7780baf6b8cd5eed6fc9e1714ee0456e1a5
 
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var txtLogin: UITextField!
+<<<<<<< HEAD
+=======
+
+>>>>>>> 995be7780baf6b8cd5eed6fc9e1714ee0456e1a5
     
     @IBOutlet weak var messageInfo: UILabel!
     @IBOutlet weak var imgLogin: UIImageView!
@@ -40,7 +47,10 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+<<<<<<< HEAD
     
+=======
+>>>>>>> 995be7780baf6b8cd5eed6fc9e1714ee0456e1a5
     func Login(){
         
         
