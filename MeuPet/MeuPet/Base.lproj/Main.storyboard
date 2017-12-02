@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ToW-Rs-lla">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ToW-Rs-lla">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MeuPet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="MeuPet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -22,49 +22,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="petlogo" translatesAutoresizingMaskIntoConstraints="NO" id="EnP-Z1-whR">
-                                <rect key="frame" x="67" y="72" width="240" height="184"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuário" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lfK-Q1-Ydd">
-                                <rect key="frame" x="67" y="318" width="240" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lfK-Q1-Ydd">
+                                <rect key="frame" x="26" y="316" width="310" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="wHn-OF-AJW"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SY7-bn-4qM">
-                                <rect key="frame" x="67" y="356" width="240" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SY7-bn-4qM">
+                                <rect key="frame" x="26" y="356" width="310" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="fvo-Lh-cEk"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGg-G6-Dnk">
-                                <rect key="frame" x="137" y="394" width="99" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGg-G6-Dnk">
+                                <rect key="frame" x="132" y="402" width="99" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="99" id="2RJ-La-OJy"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="99" id="aNn-1V-i4o"/>
                                 </constraints>
                                 <state key="normal" title="Entrar"/>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="petlogo" translatesAutoresizingMaskIntoConstraints="NO" id="USY-QQ-U8z">
+                                <rect key="frame" x="118" y="162" width="126" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="SY7-bn-4qM" firstAttribute="centerX" secondItem="YGg-G6-Dnk" secondAttribute="centerX" id="0xU-f6-Rkh"/>
-                            <constraint firstItem="lfK-Q1-Ydd" firstAttribute="leading" secondItem="SY7-bn-4qM" secondAttribute="leading" id="6Qk-Fg-3zR"/>
-                            <constraint firstItem="lfK-Q1-Ydd" firstAttribute="trailing" secondItem="SY7-bn-4qM" secondAttribute="trailing" id="Ed7-CD-Wnb"/>
-                            <constraint firstItem="EnP-Z1-whR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aBL-Ad-v3b"/>
+                            <constraint firstItem="YGg-G6-Dnk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="3gL-kS-Czp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YGg-G6-Dnk" secondAttribute="trailing" constant="40" id="8GK-q9-HLm"/>
+                            <constraint firstItem="lfK-Q1-Ydd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Pwg-5J-AxB"/>
+                            <constraint firstItem="SY7-bn-4qM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Yld-P6-Jzg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lfK-Q1-Ydd" secondAttribute="trailing" constant="10" id="crT-yM-aSO"/>
+                            <constraint firstItem="YGg-G6-Dnk" firstAttribute="top" secondItem="SY7-bn-4qM" secondAttribute="bottom" constant="10" id="ffW-Li-65d"/>
+                            <constraint firstItem="SY7-bn-4qM" firstAttribute="top" secondItem="lfK-Q1-Ydd" secondAttribute="bottom" constant="10" id="gD6-4w-rho"/>
                             <constraint firstItem="YGg-G6-Dnk" firstAttribute="top" secondItem="SY7-bn-4qM" secondAttribute="bottom" constant="8" symbolic="YES" id="gGn-EV-ukp"/>
-                            <constraint firstItem="EnP-Z1-whR" firstAttribute="trailing" secondItem="lfK-Q1-Ydd" secondAttribute="trailing" id="klm-pH-eOd"/>
-                            <constraint firstItem="EnP-Z1-whR" firstAttribute="leading" secondItem="lfK-Q1-Ydd" secondAttribute="leading" id="l3w-BV-4Et"/>
-                            <constraint firstItem="lfK-Q1-Ydd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lcA-Xy-C8a"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YGg-G6-Dnk" secondAttribute="bottom" constant="243" id="mIf-ka-N0C"/>
-                            <constraint firstItem="lfK-Q1-Ydd" firstAttribute="top" secondItem="EnP-Z1-whR" secondAttribute="bottom" constant="62" id="o0A-LX-RaG"/>
-                            <constraint firstItem="EnP-Z1-whR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="pre-bb-HHD"/>
-                            <constraint firstItem="EnP-Z1-whR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="uDo-xG-GRF"/>
-                            <constraint firstItem="SY7-bn-4qM" firstAttribute="top" secondItem="lfK-Q1-Ydd" secondAttribute="bottom" constant="8" symbolic="YES" id="xHj-gq-JUF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SY7-bn-4qM" secondAttribute="trailing" constant="10" id="ueH-mm-l4d"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sGc-af-mbC"/>
                     <connections>
-                        <segue destination="mbE-ex-oFE" kind="show" id="yFA-gR-E7E"/>
+                        <outlet property="imgLogin" destination="USY-QQ-U8z" id="Obd-0Q-IZv"/>
+                        <outlet property="txtLogin" destination="lfK-Q1-Ydd" id="QCG-2w-uXF"/>
+                        <outlet property="txtPassword" destination="SY7-bn-4qM" id="1vB-Bn-hNv"/>
+                        <segue destination="mbE-ex-oFE" kind="show" identifier="segueLogin" id="yFA-gR-E7E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -74,7 +83,7 @@
         <!--Doação-->
         <scene sceneID="jEo-Js-9Cj">
             <objects>
-                <viewController id="dCB-d7-cO4" sceneMemberID="viewController">
+                <viewController id="dCB-d7-cO4" customClass="DoacaoController" customModule="MeuPet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fAC-88-0ge"/>
                         <viewControllerLayoutGuide type="bottom" id="uiX-6S-UCf"/>
@@ -101,13 +110,137 @@
                     <view key="view" contentMode="scaleToFill" id="BW2-jF-8XK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meus Pets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkI-DU-7HQ">
+                                <rect key="frame" x="9" y="89" width="360" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.1428507936" green="0.54094022929999996" blue="0.73716806989999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bbH-fy-4Bl">
+                                <rect key="frame" x="8" y="115" width="359" height="157"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Qwv-O6-g5e">
+                                    <size key="itemSize" width="166" height="152"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="IBS-wY-Ksx" customClass="PetCollectionViewCell" customModule="MeuPet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="166" height="152"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="166" height="152"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X5F-aG-Mqo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="166" height="132"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome do Pet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mql-xF-0gL">
+                                                    <rect key="frame" x="0.0" y="131" width="166" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="X5F-aG-Mqo" secondAttribute="bottom" constant="20" id="NpJ-ik-Rnf"/>
+                                            <constraint firstItem="X5F-aG-Mqo" firstAttribute="top" secondItem="IBS-wY-Ksx" secondAttribute="top" id="qsq-Vc-A8L"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Próximos Agendamentos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEK-7t-l3m">
+                                <rect key="frame" x="10" y="283" width="350" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.14285079356401265" green="0.54094022930232832" blue="0.73716806994818651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5JH-qr-eOW">
+                                <rect key="frame" x="10" y="309" width="355" height="301"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DPp-DR-ZKC">
+                                    <size key="itemSize" width="355" height="78"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="agendamentoViewCell" id="SuH-e0-X2f" customClass="AgendamentoCollectionViewCell" customModule="MeuPet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="78"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="78"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10/12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dfo-nZ-Ira">
+                                                    <rect key="frame" x="33" y="8" width="64" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descrição" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8J-HL-kWG">
+                                                    <rect key="frame" x="112" y="8" width="252" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pet A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8RB-xj-ugi">
+                                                    <rect key="frame" x="112" y="23" width="253" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Localização do agendamento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kd-Gi-M7E">
+                                                    <rect key="frame" x="45" y="51" width="276" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2M7-cx-wQJ">
+                                                    <rect key="frame" x="41" y="23" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="pnj-uv-kNp">
+                                                    <rect key="frame" x="8" y="9" width="29" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="marker" translatesAutoresizingMaskIntoConstraints="NO" id="QZk-hH-O6V">
+                                                    <rect key="frame" x="10" y="49" width="25" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AHf-VI-mvY" firstAttribute="top" secondItem="5JH-qr-eOW" secondAttribute="bottom" constant="10" id="4vW-td-RJe"/>
+                            <constraint firstItem="5JH-qr-eOW" firstAttribute="leading" secondItem="BW2-jF-8XK" secondAttribute="leading" constant="10" id="Co0-uq-auB"/>
+                            <constraint firstAttribute="trailing" secondItem="5JH-qr-eOW" secondAttribute="trailing" constant="10" id="FtF-UQ-qDV"/>
+                            <constraint firstItem="bbH-fy-4Bl" firstAttribute="leading" secondItem="BW2-jF-8XK" secondAttribute="leading" constant="8" id="rgN-8K-N7b"/>
+                            <constraint firstAttribute="trailing" secondItem="bbH-fy-4Bl" secondAttribute="trailing" constant="8" id="s8n-tR-aBQ"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="pet" id="TwI-fU-FwJ"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="TwI-fU-FwJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D6r-eK-mAz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1679" y="-960"/>
+            <point key="canvasLocation" x="1677.5999999999999" y="-960.2698650674663"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Q0d-8O-FIG">
@@ -147,8 +280,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="donate" width="25" height="25"/>
-        <image name="pet" width="25" height="25"/>
+        <image name="calendar" width="19" height="19"/>
+        <image name="donate" width="19" height="19"/>
+        <image name="home" width="19" height="19"/>
+        <image name="marker" width="19" height="19"/>
         <image name="petlogo" width="100" height="100"/>
     </resources>
 </document>

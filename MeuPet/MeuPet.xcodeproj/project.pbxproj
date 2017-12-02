@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E5FF406B6FFDB4A8A1714584 /* Pods_MeuPet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF27FD871CFFF215719F73E /* Pods_MeuPet.framework */; };
+		C281A76C1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281A76B1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift */; };
+		C28FF2271FC9DFA5007AD80E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28FF2261FC9DFA5007AD80E /* LoginViewController.swift */; };
+		C28FF22B1FC9E7AB007AD80E /* PetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28FF22A1FC9E7AB007AD80E /* PetCollectionViewCell.swift */; };
+		C28FF22D1FC9EDAE007AD80E /* house.png in Resources */ = {isa = PBXBuildFile; fileRef = C28FF22C1FC9EDAE007AD80E /* house.png */; };
 		E84019C41FC9C9DE004BD2C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84019C31FC9C9DE004BD2C8 /* AppDelegate.swift */; };
 		E84019C61FC9C9DE004BD2C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84019C51FC9C9DE004BD2C8 /* ViewController.swift */; };
 		E84019C91FC9C9DE004BD2C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84019C71FC9C9DE004BD2C8 /* Main.storyboard */; };
@@ -33,8 +36,11 @@
 
 /* Begin PBXFileReference section */
 		760B6730DF76E61B1C8C1528 /* Pods-MeuPet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeuPet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeuPet/Pods-MeuPet.debug.xcconfig"; sourceTree = "<group>"; };
-		7EF27FD871CFFF215719F73E /* Pods_MeuPet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeuPet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB3BBB52FA344A533523B5D /* Pods-MeuPet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeuPet.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeuPet/Pods-MeuPet.release.xcconfig"; sourceTree = "<group>"; };
+		C281A76B1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendamentoCollectionViewCell.swift; sourceTree = "<group>"; };
+		C28FF2261FC9DFA5007AD80E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C28FF22A1FC9E7AB007AD80E /* PetCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetCollectionViewCell.swift; sourceTree = "<group>"; };
+		C28FF22C1FC9EDAE007AD80E /* house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = house.png; sourceTree = "<group>"; };
 		E84019C01FC9C9DE004BD2C8 /* MeuPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeuPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E84019C31FC9C9DE004BD2C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E84019C51FC9C9DE004BD2C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +58,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5FF406B6FFDB4A8A1714584 /* Pods_MeuPet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,7 +76,6 @@
 		174B60CB496D2BA1C2B0D90A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7EF27FD871CFFF215719F73E /* Pods_MeuPet.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -100,12 +104,16 @@
 				E84019C31FC9C9DE004BD2C8 /* AppDelegate.swift */,
 				E84019C51FC9C9DE004BD2C8 /* ViewController.swift */,
 				E84019C71FC9C9DE004BD2C8 /* Main.storyboard */,
+				C28FF22C1FC9EDAE007AD80E /* house.png */,
 				E84019CD1FC9C9DE004BD2C8 /* Assets.xcassets */,
 				E84019CF1FC9C9DE004BD2C8 /* LaunchScreen.storyboard */,
 				E84019D21FC9C9DE004BD2C8 /* Info.plist */,
 				E84019CA1FC9C9DE004BD2C8 /* MeuPet.xcdatamodeld */,
 				E84019D81FC9D17A004BD2C8 /* HomeController.swift */,
 				E84019DA1FC9D1DC004BD2C8 /* DoacaoController.swift */,
+				C28FF2261FC9DFA5007AD80E /* LoginViewController.swift */,
+				C28FF22A1FC9E7AB007AD80E /* PetCollectionViewCell.swift */,
+				C281A76B1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift */,
 			);
 			path = MeuPet;
 			sourceTree = "<group>";
@@ -173,6 +181,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C28FF22D1FC9EDAE007AD80E /* house.png in Resources */,
 				E84019D11FC9C9DE004BD2C8 /* LaunchScreen.storyboard in Resources */,
 				E84019CE1FC9C9DE004BD2C8 /* Assets.xcassets in Resources */,
 				E84019C91FC9C9DE004BD2C8 /* Main.storyboard in Resources */,
@@ -240,10 +249,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C281A76C1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift in Sources */,
+				C28FF2271FC9DFA5007AD80E /* LoginViewController.swift in Sources */,
 				E84019DB1FC9D1DC004BD2C8 /* DoacaoController.swift in Sources */,
 				E84019D91FC9D17A004BD2C8 /* HomeController.swift in Sources */,
 				E84019C61FC9C9DE004BD2C8 /* ViewController.swift in Sources */,
 				E84019CC1FC9C9DE004BD2C8 /* MeuPet.xcdatamodeld in Sources */,
+				C28FF22B1FC9E7AB007AD80E /* PetCollectionViewCell.swift in Sources */,
 				E84019C41FC9C9DE004BD2C8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +430,7 @@
 				E84019D71FC9C9DE004BD2C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
