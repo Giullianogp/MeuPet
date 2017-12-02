@@ -48,6 +48,7 @@
                                 </constraints>
                                 <state key="normal" title="Entrar"/>
                                 <connections>
+                                    <action selector="LoginClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aF5-1z-mEQ"/>
                                     <action selector="btnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ExJ-ZC-LQs"/>
                                 </connections>
                             </button>
@@ -132,7 +133,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bbH-fy-4Bl">
                                 <rect key="frame" x="8" y="115" width="359" height="157"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Qwv-O6-g5e">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Qwv-O6-g5e">
                                     <size key="itemSize" width="166" height="152"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -140,7 +141,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="IBS-wY-Ksx" customClass="PetCollectionViewCell" customModule="MeuPet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="166" height="152"/>
+                                        <rect key="frame" x="0.0" y="2.5" width="166" height="152"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="166" height="152"/>
@@ -162,6 +163,10 @@
                                             <constraint firstAttribute="bottom" secondItem="X5F-aG-Mqo" secondAttribute="bottom" constant="20" id="NpJ-ik-Rnf"/>
                                             <constraint firstItem="X5F-aG-Mqo" firstAttribute="top" secondItem="IBS-wY-Ksx" secondAttribute="top" id="qsq-Vc-A8L"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="imagePet" destination="X5F-aG-Mqo" id="R1y-vS-97L"/>
+                                            <outlet property="nomePet" destination="mql-xF-0gL" id="dgT-SB-OUN"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

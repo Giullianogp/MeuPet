@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABEAA6097EBF1726DF8FDA13 /* Pods_MeuPet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44799ADA85BDD13C2217888D /* Pods_MeuPet.framework */; };
 		C281A76C1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281A76B1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift */; };
 		C281A78C1FD3004600A642FA /* AgendamentosDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281A78B1FD3004600A642FA /* AgendamentosDataSource.swift */; };
 		C28FF2271FC9DFA5007AD80E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28FF2261FC9DFA5007AD80E /* LoginViewController.swift */; };
 		C28FF22B1FC9E7AB007AD80E /* PetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28FF22A1FC9E7AB007AD80E /* PetCollectionViewCell.swift */; };
 		C28FF22D1FC9EDAE007AD80E /* house.png in Resources */ = {isa = PBXBuildFile; fileRef = C28FF22C1FC9EDAE007AD80E /* house.png */; };
+		C2ADD7251FD2DE9000C8B75E /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ADD7241FD2DE9000C8B75E /* Pet.swift */; };
+		C2ADD7271FD2DEA000C8B75E /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ADD7261FD2DEA000C8B75E /* Usuario.swift */; };
+		C2ADD7291FD2E0AD00C8B75E /* Agenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ADD7281FD2E0AD00C8B75E /* Agenda.swift */; };
+		C2ADD72B1FD2F4F700C8B75E /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ADD72A1FD2F4F700C8B75E /* UserManager.swift */; };
 		E84019C41FC9C9DE004BD2C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84019C31FC9C9DE004BD2C8 /* AppDelegate.swift */; };
 		E84019C61FC9C9DE004BD2C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84019C51FC9C9DE004BD2C8 /* ViewController.swift */; };
 		E84019C91FC9C9DE004BD2C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84019C71FC9C9DE004BD2C8 /* Main.storyboard */; };
@@ -36,6 +41,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		44799ADA85BDD13C2217888D /* Pods_MeuPet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeuPet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		760B6730DF76E61B1C8C1528 /* Pods-MeuPet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeuPet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeuPet/Pods-MeuPet.debug.xcconfig"; sourceTree = "<group>"; };
 		BAB3BBB52FA344A533523B5D /* Pods-MeuPet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeuPet.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeuPet/Pods-MeuPet.release.xcconfig"; sourceTree = "<group>"; };
 		C281A76B1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendamentoCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -43,6 +49,10 @@
 		C28FF2261FC9DFA5007AD80E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C28FF22A1FC9E7AB007AD80E /* PetCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetCollectionViewCell.swift; sourceTree = "<group>"; };
 		C28FF22C1FC9EDAE007AD80E /* house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = house.png; sourceTree = "<group>"; };
+		C2ADD7241FD2DE9000C8B75E /* Pet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		C2ADD7261FD2DEA000C8B75E /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		C2ADD7281FD2E0AD00C8B75E /* Agenda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Agenda.swift; sourceTree = "<group>"; };
+		C2ADD72A1FD2F4F700C8B75E /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		E84019C01FC9C9DE004BD2C8 /* MeuPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeuPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E84019C31FC9C9DE004BD2C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E84019C51FC9C9DE004BD2C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABEAA6097EBF1726DF8FDA13 /* Pods_MeuPet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,8 +89,20 @@
 		174B60CB496D2BA1C2B0D90A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				44799ADA85BDD13C2217888D /* Pods_MeuPet.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2ADD7231FD2DE4900C8B75E /* Entidades */ = {
+			isa = PBXGroup;
+			children = (
+				C2ADD7241FD2DE9000C8B75E /* Pet.swift */,
+				C2ADD7261FD2DEA000C8B75E /* Usuario.swift */,
+				C2ADD72A1FD2F4F700C8B75E /* UserManager.swift */,
+				C2ADD7281FD2E0AD00C8B75E /* Agenda.swift */,
+			);
+			name = Entidades;
 			sourceTree = "<group>";
 		};
 		E84019B71FC9C9DE004BD2C8 = {
@@ -103,6 +126,7 @@
 		E84019C21FC9C9DE004BD2C8 /* MeuPet */ = {
 			isa = PBXGroup;
 			children = (
+				C2ADD7231FD2DE4900C8B75E /* Entidades */,
 				E84019C31FC9C9DE004BD2C8 /* AppDelegate.swift */,
 				E84019C51FC9C9DE004BD2C8 /* ViewController.swift */,
 				E84019C71FC9C9DE004BD2C8 /* Main.storyboard */,
@@ -256,10 +280,14 @@
 				C28FF2271FC9DFA5007AD80E /* LoginViewController.swift in Sources */,
 				C281A78C1FD3004600A642FA /* AgendamentosDataSource.swift in Sources */,
 				E84019DB1FC9D1DC004BD2C8 /* DoacaoController.swift in Sources */,
+				C2ADD7251FD2DE9000C8B75E /* Pet.swift in Sources */,
 				E84019D91FC9D17A004BD2C8 /* HomeController.swift in Sources */,
 				E84019C61FC9C9DE004BD2C8 /* ViewController.swift in Sources */,
+				C2ADD72B1FD2F4F700C8B75E /* UserManager.swift in Sources */,
 				E84019CC1FC9C9DE004BD2C8 /* MeuPet.xcdatamodeld in Sources */,
 				C28FF22B1FC9E7AB007AD80E /* PetCollectionViewCell.swift in Sources */,
+				C2ADD7271FD2DEA000C8B75E /* Usuario.swift in Sources */,
+				C2ADD7291FD2E0AD00C8B75E /* Agenda.swift in Sources */,
 				E84019C41FC9C9DE004BD2C8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

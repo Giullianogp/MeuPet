@@ -11,5 +11,10 @@ import UIKit
 class PetCollectionViewCell: UICollectionViewCell {
     
     
+    @IBOutlet weak var imagePet: UIImageView!
+    @IBOutlet weak var nomePet: UILabel!
+
+
+    
     
 }

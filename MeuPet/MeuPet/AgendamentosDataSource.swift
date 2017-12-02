@@ -8,9 +8,9 @@
 
 import UIKit
 
-class AgendamentosDataSource: NSObject {
+class AgendaDataSource: NSObject {
     
-    var data = [Movie]()
+    var data = [Agenda]()
     
     override init() {
         super.init()
