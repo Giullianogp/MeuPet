@@ -9,16 +9,19 @@
 import UIKit
 import Alamofire
 
-class HomeController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, AsyncDelegate {
+class HomeController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate , AsyncDelegate {
 
     @IBOutlet weak var petView: UICollectionView!
-    var dataManager = DataManager()
+    var dataManager = PetDataManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
 
-        // Do any additional setup after loading the view.
+        self.dataManager.delegate = self
+        self.petView.dataSource = self
+        self.petView.delegate = self
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,6 +29,28 @@ class HomeController: UIViewController, UICollectionViewDataSource, UICollection
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.dataManager.pets.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "petCell", for: indexPath) as! PetCollectionViewCell
+        
+        cell.pet = self.dataManager.getPet(at: indexPath.row)
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+        performSegue(withIdentifier: "detalhePet", sender: indexPath.row)
+    }
+
+    
+    func done() {
+        petView.reloadData()
+    }
 
     
     func consultaPet(){
@@ -63,5 +88,9 @@ class HomeController: UIViewController, UICollectionViewDataSource, UICollection
     */
         
         
-}}}}
+}
+
+
+
+
 

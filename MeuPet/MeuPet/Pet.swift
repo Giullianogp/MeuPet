@@ -10,17 +10,21 @@ import UIKit
 
 class Pet {
     
-    var PetId : Int
-    var Nome : String
-    var ImageUrl : String
-    var Nascimento : String
+    var PetId : Int!
+    var Nome : String!
+    var ImageUrl : String!
+    var Nascimento : String!
 
+    init() {
+    }
 
-init(data: [String: Any]) {
-    self.PetId = data["PetId"] as? Int ?? 0
-    self.Nome = data["Nome"] as? String ?? ""
-    self.ImageUrl = data["ImageUrl"] as? String ?? ""
-    self.Nascimento = data["Nascimento"] as? String ?? ""
+    convenience init(data: [String: Any]) {
+        self.init()
+        
+        self.PetId = data["PetId"] as? Int ?? 0
+        self.Nome = data["Nome"] as? String ?? ""
+        self.ImageUrl = data["ImageUrl"] as? String ?? ""
+        self.Nascimento = data["Nascimento"] as? String ?? ""
     }
 
 }
