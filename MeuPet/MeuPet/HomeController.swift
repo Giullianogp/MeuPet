@@ -9,34 +9,28 @@
 import UIKit
 //import Alamofire
 
-<<<<<<< HEAD
 class HomeController: UIViewController, UICollectionViewDataSource {
     
     @IBOutlet weak var agendamentoCollectionView: UICollectionView!
 
     private var agendaDataSource = AgendaDataSource()
     private var agenda :Agenda!
-=======
 class HomeController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate , AsyncDelegate {
 
     @IBOutlet weak var petView: UICollectionView!
     var dataManager = PetDataManager()
->>>>>>> 0e041208f74886fbec46f00ae0543d980cbb2aa8
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.agendamentoCollectionView.dataSource = self
 
-<<<<<<< HEAD
         self.navigationItem.hidesBackButton = true
         
         // Do any additional setup after loading the view.
-=======
         self.dataManager.delegate = self
         self.petView.dataSource = self
         self.petView.delegate = self
 
->>>>>>> 0e041208f74886fbec46f00ae0543d980cbb2aa8
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,7 +38,6 @@ class HomeController: UIViewController,UICollectionViewDataSource, UICollectionV
         // Dispose of any resources that can be recreated.
     }
     
-<<<<<<< HEAD
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.agendaDataSource.data.count
     }
@@ -62,8 +55,6 @@ class HomeController: UIViewController,UICollectionViewDataSource, UICollectionV
         return cell
     }
 
-=======
->>>>>>> 0e041208f74886fbec46f00ae0543d980cbb2aa8
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.dataManager.pets.count
