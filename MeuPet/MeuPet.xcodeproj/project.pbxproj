@@ -27,6 +27,8 @@
 		E84019D11FC9C9DE004BD2C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84019CF1FC9C9DE004BD2C8 /* LaunchScreen.storyboard */; };
 		E84019D91FC9D17A004BD2C8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84019D81FC9D17A004BD2C8 /* HomeController.swift */; };
 		E84019DB1FC9D1DC004BD2C8 /* DoacaoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84019DA1FC9D1DC004BD2C8 /* DoacaoController.swift */; };
+		E87476BC1FD314FE0078F731 /* DetalheAgendaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87476BB1FD314FE0078F731 /* DetalheAgendaController.swift */; };
+		E8E954091FD3223200E22799 /* PetDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E954081FD3223200E22799 /* PetDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,6 +69,8 @@
 		E84019D21FC9C9DE004BD2C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E84019D81FC9D17A004BD2C8 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		E84019DA1FC9D1DC004BD2C8 /* DoacaoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoacaoController.swift; sourceTree = "<group>"; };
+		E87476BB1FD314FE0078F731 /* DetalheAgendaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalheAgendaController.swift; sourceTree = "<group>"; };
+		E8E954081FD3223200E22799 /* PetDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,8 @@
 				C28FF2261FC9DFA5007AD80E /* LoginViewController.swift */,
 				C28FF22A1FC9E7AB007AD80E /* PetCollectionViewCell.swift */,
 				C281A76B1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift */,
+				E87476BB1FD314FE0078F731 /* DetalheAgendaController.swift */,
+				E8E954081FD3223200E22799 /* PetDataManager.swift */,
 			);
 			path = MeuPet;
 			sourceTree = "<group>";
@@ -286,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C281A76C1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift in Sources */,
+				E8E954091FD3223200E22799 /* PetDataManager.swift in Sources */,
 				C28FF2271FC9DFA5007AD80E /* LoginViewController.swift in Sources */,
 				E84019DB1FC9D1DC004BD2C8 /* DoacaoController.swift in Sources */,
 				C2ADD7251FD2DE9000C8B75E /* Pet.swift in Sources */,
@@ -295,6 +302,7 @@
 				E84019CC1FC9C9DE004BD2C8 /* MeuPet.xcdatamodeld in Sources */,
 				C28FF22B1FC9E7AB007AD80E /* PetCollectionViewCell.swift in Sources */,
 				C2ADD7271FD2DEA000C8B75E /* Usuario.swift in Sources */,
+				E87476BC1FD314FE0078F731 /* DetalheAgendaController.swift in Sources */,
 				C2ADD7291FD2E0AD00C8B75E /* Agenda.swift in Sources */,
 				E84019C41FC9C9DE004BD2C8 /* AppDelegate.swift in Sources */,
 			);
