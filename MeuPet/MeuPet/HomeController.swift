@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class HomeController: UIViewController {
 
@@ -22,6 +23,31 @@ class HomeController: UIViewController {
     }
     
 
+    
+    func consultaPet(){
+    
+    
+    Alamofire.request("https://meuapp.azurewebsites.net/api/usuario/logar", method: .get)
+        .authenticate(user: "admin", password: "123")
+        .responseJSON { response  in
+    if (response.result.error == nil){
+    
+    print("Request: \(String(describing: response.request))")   // original url request
+    print("Response: \(String(describing: response.response))") // http url response
+    print("Result: \(response.result)")                         // response serialization result
+    
+    if let json = response.result.value  as? [String: Any],
+    let results = json["results"] as? [[String: Any]] {
+    
+    for data in results {
+        UserManager.shared.user = Usuario(data: data)
+    }
+    
+        
+    
+    }
+    
+    
     /*
     // MARK: - Navigation
 
@@ -31,5 +57,7 @@ class HomeController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+        
+        
+}}}}
 
-}
