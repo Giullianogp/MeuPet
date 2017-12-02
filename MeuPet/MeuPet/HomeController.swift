@@ -9,20 +9,34 @@
 import UIKit
 //import Alamofire
 
+<<<<<<< HEAD
 class HomeController: UIViewController, UICollectionViewDataSource {
     
     @IBOutlet weak var agendamentoCollectionView: UICollectionView!
 
     private var agendaDataSource = AgendaDataSource()
     private var agenda :Agenda!
+=======
+class HomeController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate , AsyncDelegate {
+
+    @IBOutlet weak var petView: UICollectionView!
+    var dataManager = PetDataManager()
+>>>>>>> 0e041208f74886fbec46f00ae0543d980cbb2aa8
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.agendamentoCollectionView.dataSource = self
 
+<<<<<<< HEAD
         self.navigationItem.hidesBackButton = true
         
         // Do any additional setup after loading the view.
+=======
+        self.dataManager.delegate = self
+        self.petView.dataSource = self
+        self.petView.delegate = self
+
+>>>>>>> 0e041208f74886fbec46f00ae0543d980cbb2aa8
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,6 +44,7 @@ class HomeController: UIViewController, UICollectionViewDataSource {
         // Dispose of any resources that can be recreated.
     }
     
+<<<<<<< HEAD
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.agendaDataSource.data.count
     }
@@ -47,25 +62,50 @@ class HomeController: UIViewController, UICollectionViewDataSource {
         return cell
     }
 
+=======
+>>>>>>> 0e041208f74886fbec46f00ae0543d980cbb2aa8
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.dataManager.pets.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "petCell", for: indexPath) as! PetCollectionViewCell
+        
+        cell.pet = self.dataManager.getPet(at: indexPath.row)
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+        performSegue(withIdentifier: "detalhePet", sender: indexPath.row)
+    }
+
+    
+    func done() {
+        petView.reloadData()
+    }
+
     
     func consultaPet(){
     
     
-    Alamofire.request("https://meuapp.azurewebsites.net/api/usuario/logar", method: .get)
-        .authenticate(user: "admin", password: "123")
-        .responseJSON { response  in
-    if (response.result.error == nil){
-    
-    print("Request: \(String(describing: response.request))")   // original url request
-    print("Response: \(String(describing: response.response))") // http url response
-    print("Result: \(response.result)")                         // response serialization result
-    
-    if let json = response.result.value  as? [String: Any],
-    let results = json["results"] as? [[String: Any]] {
-    
-    for data in results {
-        UserManager.shared.user = Usuario(data: data)
-    }
+//    Alamofire.request("https://meuapp.azurewebsites.net/api/usuario/logar", method: .get)
+//        .authenticate(user: "admin", password: "123")
+//        .responseJSON { response  in
+//    if (response.result.error == nil){
+//    
+//    print("Request: \(String(describing: response.request))")   // original url request
+//    print("Response: \(String(describing: response.response))") // http url response
+//    print("Result: \(response.result)")                         // response serialization result
+//    
+//    if let json = response.result.value  as? [String: Any],
+//    let results = json["results"] as? [[String: Any]] {
+//    
+//    for data in results {
+//        UserManager.shared.user = Usuario(data: data)
+//    }
     
         
     
@@ -83,5 +123,9 @@ class HomeController: UIViewController, UICollectionViewDataSource {
     */
         
         
-}}}}
+}
+
+
+
+
 

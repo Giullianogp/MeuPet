@@ -19,6 +19,7 @@
 		C2ADD72B1FD2F4F700C8B75E /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ADD72A1FD2F4F700C8B75E /* UserManager.swift */; };
 		C2ADD72D1FD302DA00C8B75E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2ADD72C1FD302DA00C8B75E /* Login.storyboard */; };
 		C2ADD72F1FD304D300C8B75E /* Adocao.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2ADD72E1FD304D300C8B75E /* Adocao.storyboard */; };
+		C2ADD7311FD30D7700C8B75E /* Pet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2ADD7301FD30D7700C8B75E /* Pet.storyboard */; };
 		E84019C41FC9C9DE004BD2C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84019C31FC9C9DE004BD2C8 /* AppDelegate.swift */; };
 		E84019C61FC9C9DE004BD2C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84019C51FC9C9DE004BD2C8 /* ViewController.swift */; };
 		E84019C91FC9C9DE004BD2C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84019C71FC9C9DE004BD2C8 /* Main.storyboard */; };
@@ -27,6 +28,8 @@
 		E84019D11FC9C9DE004BD2C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84019CF1FC9C9DE004BD2C8 /* LaunchScreen.storyboard */; };
 		E84019D91FC9D17A004BD2C8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84019D81FC9D17A004BD2C8 /* HomeController.swift */; };
 		E84019DB1FC9D1DC004BD2C8 /* DoacaoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84019DA1FC9D1DC004BD2C8 /* DoacaoController.swift */; };
+		E87476BC1FD314FE0078F731 /* DetalheAgendaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87476BB1FD314FE0078F731 /* DetalheAgendaController.swift */; };
+		E8E954091FD3223200E22799 /* PetDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E954081FD3223200E22799 /* PetDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,6 +60,7 @@
 		C2ADD72A1FD2F4F700C8B75E /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		C2ADD72C1FD302DA00C8B75E /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		C2ADD72E1FD304D300C8B75E /* Adocao.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Adocao.storyboard; sourceTree = "<group>"; };
+		C2ADD7301FD30D7700C8B75E /* Pet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Pet.storyboard; sourceTree = "<group>"; };
 		E84019C01FC9C9DE004BD2C8 /* MeuPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeuPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E84019C31FC9C9DE004BD2C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E84019C51FC9C9DE004BD2C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 		E84019D21FC9C9DE004BD2C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E84019D81FC9D17A004BD2C8 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		E84019DA1FC9D1DC004BD2C8 /* DoacaoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoacaoController.swift; sourceTree = "<group>"; };
+		E87476BB1FD314FE0078F731 /* DetalheAgendaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalheAgendaController.swift; sourceTree = "<group>"; };
+		E8E954081FD3223200E22799 /* PetDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +140,7 @@
 				E84019C31FC9C9DE004BD2C8 /* AppDelegate.swift */,
 				E84019C51FC9C9DE004BD2C8 /* ViewController.swift */,
 				E84019C71FC9C9DE004BD2C8 /* Main.storyboard */,
+				C2ADD7301FD30D7700C8B75E /* Pet.storyboard */,
 				C2ADD72C1FD302DA00C8B75E /* Login.storyboard */,
 				C2ADD72E1FD304D300C8B75E /* Adocao.storyboard */,
 				C28FF22C1FC9EDAE007AD80E /* house.png */,
@@ -146,7 +153,12 @@
 				C28FF2261FC9DFA5007AD80E /* LoginViewController.swift */,
 				C28FF22A1FC9E7AB007AD80E /* PetCollectionViewCell.swift */,
 				C281A76B1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift */,
+<<<<<<< HEAD
 				C281A78B1FD3004600A642FA /* AgendaDataSource.swift */,
+=======
+				E87476BB1FD314FE0078F731 /* DetalheAgendaController.swift */,
+				E8E954081FD3223200E22799 /* PetDataManager.swift */,
+>>>>>>> 0e041208f74886fbec46f00ae0543d980cbb2aa8
 			);
 			path = MeuPet;
 			sourceTree = "<group>";
@@ -220,6 +232,7 @@
 				C2ADD72F1FD304D300C8B75E /* Adocao.storyboard in Resources */,
 				C2ADD72D1FD302DA00C8B75E /* Login.storyboard in Resources */,
 				E84019C91FC9C9DE004BD2C8 /* Main.storyboard in Resources */,
+				C2ADD7311FD30D7700C8B75E /* Pet.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,10 +247,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MeuPet/Pods-MeuPet-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -285,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C281A76C1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift in Sources */,
+				E8E954091FD3223200E22799 /* PetDataManager.swift in Sources */,
 				C28FF2271FC9DFA5007AD80E /* LoginViewController.swift in Sources */,
 				C281A78C1FD3004600A642FA /* AgendaDataSource.swift in Sources */,
 				E84019DB1FC9D1DC004BD2C8 /* DoacaoController.swift in Sources */,
@@ -295,6 +311,7 @@
 				E84019CC1FC9C9DE004BD2C8 /* MeuPet.xcdatamodeld in Sources */,
 				C28FF22B1FC9E7AB007AD80E /* PetCollectionViewCell.swift in Sources */,
 				C2ADD7271FD2DEA000C8B75E /* Usuario.swift in Sources */,
+				E87476BC1FD314FE0078F731 /* DetalheAgendaController.swift in Sources */,
 				C2ADD7291FD2E0AD00C8B75E /* Agenda.swift in Sources */,
 				E84019C41FC9C9DE004BD2C8 /* AppDelegate.swift in Sources */,
 			);

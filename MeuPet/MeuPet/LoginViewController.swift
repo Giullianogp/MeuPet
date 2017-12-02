@@ -10,11 +10,14 @@ import UIKit
 import Alamofire
 
 
+<<<<<<< HEAD
 protocol AsyncDelegate {
     func done()
 }
 
 
+=======
+>>>>>>> 0e041208f74886fbec46f00ae0543d980cbb2aa8
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var txtLogin: UITextField!
