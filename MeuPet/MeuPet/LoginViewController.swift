@@ -8,14 +8,22 @@
 
 import UIKit
 import Alamofire
+<<<<<<< HEAD
 
 protocol AsyncDelegate {
     func done()
 }
+=======
+>>>>>>> 4ffb407a93ef983a1eddd4de0224a70412ff2804
 
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var txtLogin: UITextField!
+<<<<<<< HEAD
+=======
+    
+    @IBOutlet weak var messageInfo: UILabel!
+>>>>>>> 4ffb407a93ef983a1eddd4de0224a70412ff2804
     @IBOutlet weak var imgLogin: UIImageView!
     @IBOutlet weak var txtPassword: UITextField!
     var delegate: AsyncDelegate?
@@ -36,6 +44,7 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+<<<<<<< HEAD
     
     func Login(){
         
@@ -72,8 +81,26 @@ class LoginViewController: UIViewController {
     
     }
     
+=======
+    @IBAction func btnLogin(_ sender: Any) {
+        
+        if (txtLogin.text?.isEmpty)! || (txtPassword.text?.isEmpty)! {
+            messageInfo.text = "Preencha o email/senha"
+            return
+        } else {
+            messageInfo.text = " "
+        }
+        
+        
+
+        performSegue(withIdentifier: "segueLogin", sender: sender)
+    
+    }
+>>>>>>> 4ffb407a93ef983a1eddd4de0224a70412ff2804
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        //envia os dados recebidos da autenticação da API
      
     }
 

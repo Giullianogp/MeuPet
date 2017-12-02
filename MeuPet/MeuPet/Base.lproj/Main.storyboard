@@ -31,14 +31,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SY7-bn-4qM">
-                                <rect key="frame" x="26" y="356" width="310" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SY7-bn-4qM">
+                                <rect key="frame" x="26" y="356" width="240" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="fvo-Lh-cEk"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGg-G6-Dnk">
                                 <rect key="frame" x="132" y="402" width="99" height="30"/>
@@ -48,13 +48,24 @@
                                 </constraints>
                                 <state key="normal" title="Entrar"/>
                                 <connections>
+<<<<<<< HEAD
                                     <action selector="LoginClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aF5-1z-mEQ"/>
+=======
+                                    <action selector="btnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ExJ-ZC-LQs"/>
+>>>>>>> 4ffb407a93ef983a1eddd4de0224a70412ff2804
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="petlogo" translatesAutoresizingMaskIntoConstraints="NO" id="USY-QQ-U8z">
-                                <rect key="frame" x="118" y="162" width="126" height="117"/>
+                                <rect key="frame" x="118" y="112" width="126" height="117"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aee-Y7-ky7">
+                                <rect key="frame" x="26" y="291.5" width="310" height="14.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -74,6 +85,7 @@
                     <navigationItem key="navigationItem" id="sGc-af-mbC"/>
                     <connections>
                         <outlet property="imgLogin" destination="USY-QQ-U8z" id="Obd-0Q-IZv"/>
+                        <outlet property="messageInfo" destination="aee-Y7-ky7" id="Q3C-J1-5iX"/>
                         <outlet property="txtLogin" destination="lfK-Q1-Ydd" id="QCG-2w-uXF"/>
                         <outlet property="txtPassword" destination="SY7-bn-4qM" id="1vB-Bn-hNv"/>
                         <segue destination="mbE-ex-oFE" kind="show" identifier="segueLogin" id="yFA-gR-E7E"/>
