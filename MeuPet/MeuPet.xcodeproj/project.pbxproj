@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C281A76C1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281A76B1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift */; };
+		C281A78C1FD3004600A642FA /* AgendamentosDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281A78B1FD3004600A642FA /* AgendamentosDataSource.swift */; };
 		C28FF2271FC9DFA5007AD80E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28FF2261FC9DFA5007AD80E /* LoginViewController.swift */; };
 		C28FF22B1FC9E7AB007AD80E /* PetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28FF22A1FC9E7AB007AD80E /* PetCollectionViewCell.swift */; };
 		C28FF22D1FC9EDAE007AD80E /* house.png in Resources */ = {isa = PBXBuildFile; fileRef = C28FF22C1FC9EDAE007AD80E /* house.png */; };
@@ -38,6 +39,7 @@
 		760B6730DF76E61B1C8C1528 /* Pods-MeuPet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeuPet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeuPet/Pods-MeuPet.debug.xcconfig"; sourceTree = "<group>"; };
 		BAB3BBB52FA344A533523B5D /* Pods-MeuPet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeuPet.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeuPet/Pods-MeuPet.release.xcconfig"; sourceTree = "<group>"; };
 		C281A76B1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendamentoCollectionViewCell.swift; sourceTree = "<group>"; };
+		C281A78B1FD3004600A642FA /* AgendamentosDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendamentosDataSource.swift; sourceTree = "<group>"; };
 		C28FF2261FC9DFA5007AD80E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C28FF22A1FC9E7AB007AD80E /* PetCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetCollectionViewCell.swift; sourceTree = "<group>"; };
 		C28FF22C1FC9EDAE007AD80E /* house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = house.png; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				C28FF2261FC9DFA5007AD80E /* LoginViewController.swift */,
 				C28FF22A1FC9E7AB007AD80E /* PetCollectionViewCell.swift */,
 				C281A76B1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift */,
+				C281A78B1FD3004600A642FA /* AgendamentosDataSource.swift */,
 			);
 			path = MeuPet;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			files = (
 				C281A76C1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift in Sources */,
 				C28FF2271FC9DFA5007AD80E /* LoginViewController.swift in Sources */,
+				C281A78C1FD3004600A642FA /* AgendamentosDataSource.swift in Sources */,
 				E84019DB1FC9D1DC004BD2C8 /* DoacaoController.swift in Sources */,
 				E84019D91FC9D17A004BD2C8 /* HomeController.swift in Sources */,
 				E84019C61FC9C9DE004BD2C8 /* ViewController.swift in Sources */,
