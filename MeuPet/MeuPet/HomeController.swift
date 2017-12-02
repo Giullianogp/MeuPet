@@ -7,14 +7,21 @@
 //
 
 import UIKit
-import Alamofire
+//import Alamofire
 
-class HomeController: UIViewController {
+class HomeController: UIViewController, UICollectionViewDataSource {
+    
+    @IBOutlet weak var agendamentoCollectionView: UICollectionView!
 
+    private var agendaDataSource = AgendaDataSource()
+    private var agenda :Agenda!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.hidesBackButton = true
+        self.agendamentoCollectionView.dataSource = self
 
+        self.navigationItem.hidesBackButton = true
+        
         // Do any additional setup after loading the view.
     }
 
@@ -23,6 +30,22 @@ class HomeController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.agendaDataSource.data.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell =
+            collectionView.dequeueReusableCell(withReuseIdentifier: "agendaViewCell",
+                                               for: indexPath) as! AgendamentoCollectionViewCell
+        
+        
+        cell.agenda = self.agendaDataSource.data[indexPath.row]
+        self.agenda = cell.agenda
+        
+        print("OK2")
+        return cell
+    }
 
     
     func consultaPet(){

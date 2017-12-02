@@ -13,18 +13,11 @@ import Alamofire
 protocol AsyncDelegate {
     func done()
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 995be7780baf6b8cd5eed6fc9e1714ee0456e1a5
 
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var txtLogin: UITextField!
-<<<<<<< HEAD
-=======
-
->>>>>>> 995be7780baf6b8cd5eed6fc9e1714ee0456e1a5
     
     @IBOutlet weak var messageInfo: UILabel!
     @IBOutlet weak var imgLogin: UIImageView!
@@ -47,42 +40,39 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-<<<<<<< HEAD
-    
-=======
->>>>>>> 995be7780baf6b8cd5eed6fc9e1714ee0456e1a5
+
     func Login(){
         
         
-        Alamofire.request("https://meuapp.azurewebsites.net/api/usuario/logar", method: .post)
-            .authenticate(user: txtLogin.text!, password: txtPassword.text!)
-            .responseJSON { response  in
-            if (response.result.error == nil){
-                
-                print("Request: \(String(describing: response.request))")   // original url request
-                print("Response: \(String(describing: response.response))") // http url response
-                print("Result: \(response.result)")                         // response serialization result
-                
-                if let json = response.result.value  as? [String: Any],
-                    let results = json["results"] as? [[String: Any]] {
-                    
-                    for data in results {
-                       UserManager.shared.user = Usuario(data: data)
-                    }
-                    
-                }
-                
-                self.delegate?.done()
-
-               self.performSegue(withIdentifier: "segueLogin", sender: nil)
-            } else  {
-               
-                print(response.result.description + " " + self.txtLogin.text! + " " + self.txtPassword.text!)
-                
-                //let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.alert)
-               
-            }
-        }
+//        Alamofire.request("https://meuapp.azurewebsites.net/api/usuario/logar", method: .post)
+//            .authenticate(user: txtLogin.text!, password: txtPassword.text!)
+//            .responseJSON { response  in
+//            if (response.result.error == nil){
+//                
+//                print("Request: \(String(describing: response.request))")   // original url request
+//                print("Response: \(String(describing: response.response))") // http url response
+//                print("Result: \(response.result)")                         // response serialization result
+//                
+//                if let json = response.result.value  as? [String: Any],
+//                    let results = json["results"] as? [[String: Any]] {
+//                    
+//                    for data in results {
+//                       UserManager.shared.user = Usuario(data: data)
+//                    }
+//                    
+//                }
+//                
+//                self.delegate?.done()
+//
+//               self.performSegue(withIdentifier: "segueLogin", sender: nil)
+//            } else  {
+//               
+//                print(response.result.description + " " + self.txtLogin.text! + " " + self.txtPassword.text!)
+//                
+//                //let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.alert)
+//               
+//            }
+//        }
     
     }
     

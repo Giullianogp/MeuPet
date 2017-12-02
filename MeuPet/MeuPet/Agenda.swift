@@ -11,13 +11,17 @@ import UIKit
 
 class Agenda {
     
-    var AgendaId : Int
+    var Id : Int
     var Descricao : String
-    var Data : String
+    var PetId :Int
+    var DataHora : Date
+    var Endereco : String
     
     init(data: [String: Any]) {
-        self.AgendaId = data["AgendaId"] as? Int ?? 0
-        self.Descricao = data["Descricao"] as? String ?? ""
-        self.Data = data["Data"] as? String ?? ""
+        self.Id         = data["AgendaId"] as? Int ?? 0
+        self.Descricao  = data["Descricao"] as? String ?? ""
+        self.PetId      = data["PetId"] as? Int ?? 0
+        self.DataHora   = data["Data"] as? Date ?? Date()
+        self.Endereco   = data["Endereco"] as? String ?? ""
     }
 }
