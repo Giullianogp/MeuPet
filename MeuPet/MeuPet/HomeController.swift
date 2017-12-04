@@ -9,17 +9,15 @@
 import UIKit
 //import Alamofire
 
-class HomeController: UIViewController, UICollectionViewDataSource {
+class HomeController: UIViewController, UICollectionViewDataSource,UICollectionViewDelegate , AsyncDelegate  {
     
     @IBOutlet weak var agendamentoCollectionView: UICollectionView!
-
-    private var agendaDataSource = AgendaDataSource()
-    private var agenda :Agenda!
-class HomeController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate , AsyncDelegate {
-
     @IBOutlet weak var petView: UICollectionView!
+    
+    var agendaDataSource = AgendaDataSource()
     var dataManager = PetDataManager()
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.agendamentoCollectionView.dataSource = self
@@ -33,49 +31,44 @@ class HomeController: UIViewController,UICollectionViewDataSource, UICollectionV
 
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.agendaDataSource.data.count
-    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell =
-            collectionView.dequeueReusableCell(withReuseIdentifier: "agendaViewCell",
-                                               for: indexPath) as! AgendamentoCollectionViewCell
         
-        
-        cell.agenda = self.agendaDataSource.data[indexPath.row]
-        self.agenda = cell.agenda
-        
-        print("OK2")
-        return cell
+        if collectionView == agendamentoCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "agendaViewCell", for: indexPath) as! AgendamentoCollectionViewCell
+            cell.agenda = self.agendaDataSource.data[indexPath.row]
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "petCell", for: indexPath) as! PetCollectionViewCell
+            cell.pet = self.dataManager.getPet(at: indexPath.row)
+            return cell
+        }
     }
 
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.dataManager.pets.count
+    
+        if collectionView == agendamentoCollectionView {
+            return self.agendaDataSource.data.count
+        } else {
+            return self.dataManager.pets.count
+        }
+        
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "petCell", for: indexPath) as! PetCollectionViewCell
-        
-        cell.pet = self.dataManager.getPet(at: indexPath.row)
-        
-        return cell
-    }
-    
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-        performSegue(withIdentifier: "detalhePet", sender: indexPath.row)
+        if collectionView == petView {
+
+            performSegue(withIdentifier: "detalhePet", sender: indexPath.row)
+        }
     }
 
     
     func done() {
         petView.reloadData()
+        agendamentoCollectionView.reloadData()
     }
 
     

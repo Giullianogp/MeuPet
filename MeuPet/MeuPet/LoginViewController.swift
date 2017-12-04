@@ -10,9 +10,7 @@ import UIKit
 import Alamofire
 
 
-protocol AsyncDelegate {
-    func done()
-}
+
 
 class LoginViewController: UIViewController {
 
