@@ -153,12 +153,12 @@
 				C28FF2261FC9DFA5007AD80E /* LoginViewController.swift */,
 				C28FF22A1FC9E7AB007AD80E /* PetCollectionViewCell.swift */,
 				C281A76B1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift */,
-<<<<<<< HEAD
+
 				C281A78B1FD3004600A642FA /* AgendaDataSource.swift */,
-=======
+
 				E87476BB1FD314FE0078F731 /* DetalheAgendaController.swift */,
 				E8E954081FD3223200E22799 /* PetDataManager.swift */,
->>>>>>> 0e041208f74886fbec46f00ae0543d980cbb2aa8
+
 			);
 			path = MeuPet;
 			sourceTree = "<group>";
