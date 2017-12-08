@@ -21,7 +21,7 @@ class PetCollectionViewCell: UICollectionViewCell {
             self.nomePet.text = self.pet.Nome
             
             
-            Alamofire.request(self.pet.ImageUrl, method: .get).responseImage { response in
+            Alamofire.request(self.pet.ImageUrl!, method: .get).responseImage { response in
                 if let poster = response.result.value {
                    self.imagePet.image = poster
                 }

@@ -10,10 +10,10 @@ import UIKit
 
 class Pet {
     
-    var PetId : Int!
-    var Nome : String!
-    var ImageUrl : String!
-    var Nascimento : String!
+    var PetId : Int?
+    var Nome : String?
+    var ImageUrl : String?
+    var Nascimento : String?
 
     init() {
     }

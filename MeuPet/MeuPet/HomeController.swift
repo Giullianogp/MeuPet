@@ -20,11 +20,13 @@ class HomeController: UIViewController, UICollectionViewDataSource,UICollectionV
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.agendamentoCollectionView.dataSource = self
-
         self.navigationItem.hidesBackButton = true
         
-        // Do any additional setup after loading the view.
+        
+        self.agendaDataSource.delegate = self
+        self.agendamentoCollectionView.dataSource = self
+        self.agendamentoCollectionView.delegate = self
+        
         self.dataManager.delegate = self
         self.petView.dataSource = self
         self.petView.delegate = self

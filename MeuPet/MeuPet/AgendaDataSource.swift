@@ -12,6 +12,8 @@ class AgendaDataSource: NSObject {
     
     var data = [Agenda]()
     
+    var delegate: AsyncDelegate?
+    
     override init() {
         super.init()
         

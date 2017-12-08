@@ -30,34 +30,28 @@ class PetDataManager: NSObject {
     
     
     func getPetsAPI(){
-//        Alamofire.request("http://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=ddca64bc1ff408324eb4f1d53b9ae458&page=\(page)").responseJSON { response in
-//            print("Request: \(String(describing: response.request))")   // original url request
-//            print("Response: \(String(describing: response.response))") // http url response
-//            print("Result: \(response.result)")                         // response serialization result
-//            
-//            if let json = response.result.value  as? [String: Any],
-//                let results = json["results"] as? [[String: Any]] {
-//                
-//                for data in results {
-//                    self.filmes.append(Filme(data: data))
-//                }
-//                
-//                print("JSON: \(self.filmes)")
-//            }
-//            
-//            self.delegate?.done()
-//            
-//        }
-        
-        for index in 1...3 {
+        Alamofire.request("https://meupetapp.azurewebsites.net/api/pet/getall2").responseJSON { response in
             
-           let pet = Pet()
-            pet.Nome  = "Pet\(index)"
-            pet.Nascimento = "02/03/2015"
-            pet.ImageUrl = "http://tudosobrecachorros.com.br/wp-content/uploads/fases-da-vida-cachorro-5.jpg"
-            self.pets.append(pet)
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            //print("Result: \(response.result.value)") // response serialization result
+
+            
+            if let json = response.result.value  as? [String: Any],
+                let results = json[""] as? [[String: Any]] {
+                
+                for data in results {
+                    self.pets.append(Pet(data: data))
+                }
+                
+                print("JSON: \(self.pets)")
+            }
+            
+            self.delegate?.done()
+            
         }
         
+//             
     }
     
     
