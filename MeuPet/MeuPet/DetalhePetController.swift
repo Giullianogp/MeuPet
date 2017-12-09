@@ -27,19 +27,18 @@ class DetalhePetController: UIViewController {
         if pet == nil {
             
             let parameters: Parameters = [
-                "foo": "bar",
-                "baz": ["a", 1],
-                "qux": [
-                    "x": 1,
-                    "y": 2,
-                    "z": 3
-                ]
+                "nome": nomeView.text ?? "",
+                "imageUrl": "https://meupetblob.blob.core.windows.net/pets/image.png",
+                "peso" : pesoView.text ?? "",
+                "raca" : racaView.text ?? "",
+                "nascimento" : nascimentoView.text ?? ""
             ]
             
-            Alamofire.request("https://meupetapp.azurewebsites.net/api/pet/insert", method: .post, parameters: parameters).validate().responseJSON { response in
+            
+            Alamofire.request("https://meupetapp.azurewebsites.net/api/pet/inserir", method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseJSON { response in
                 switch response.result {
                 case .success:
-                    print("Validation Successful")
+                    self.performSegue(withIdentifier: "petSalvar", sender: nil)
                 case .failure(let error):
                     print(error)
                 }
@@ -48,19 +47,18 @@ class DetalhePetController: UIViewController {
         } else {
             
             let parameters: Parameters = [
-                "foo": "bar",
-                "baz": ["a", 1],
-                "qux": [
-                    "x": 1,
-                    "y": 2,
-                    "z": 3
-                ]
+                "PetId" : "\(pet.PetId)",
+                "Nome": nomeView.text ?? "",
+                "Peso" : pesoView.text ?? "",
+                "Raca" : racaView.text ?? "",
+                "Nascimento" : nascimentoView.text ?? ""
             ]
             
-            Alamofire.request("https://meupetapp.azurewebsites.net/api/pet/update", method: .post, parameters: parameters).validate().responseJSON { response in
+            
+            Alamofire.request("https://meupetapp.azurewebsites.net/api/pet/editar", method: .post, parameters: parameters).validate().responseJSON { response in
                 switch response.result {
                 case .success:
-                    print("Validation Successful")
+                    self.performSegue(withIdentifier: "petSalvar", sender: nil)
                 case .failure(let error):
                     print(error)
                 }

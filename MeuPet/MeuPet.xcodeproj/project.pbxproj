@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		ABEAA6097EBF1726DF8FDA13 /* Pods_MeuPet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44799ADA85BDD13C2217888D /* Pods_MeuPet.framework */; };
 		C21DD6E11FDC1AB500E788F0 /* AgendaDetalheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21DD6E01FDC1AB500E788F0 /* AgendaDetalheViewController.swift */; };
-		C21DD6E31FDC1ADA00E788F0 /* AgendaDetalheStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C21DD6E21FDC1ADA00E788F0 /* AgendaDetalheStoryboard.storyboard */; };
 		C281A76C1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281A76B1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift */; };
 		C281A78C1FD3004600A642FA /* AgendaDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281A78B1FD3004600A642FA /* AgendaDataSource.swift */; };
 		C28FF2271FC9DFA5007AD80E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28FF2261FC9DFA5007AD80E /* LoginViewController.swift */; };
@@ -57,7 +56,6 @@
 		760B6730DF76E61B1C8C1528 /* Pods-MeuPet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeuPet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeuPet/Pods-MeuPet.debug.xcconfig"; sourceTree = "<group>"; };
 		BAB3BBB52FA344A533523B5D /* Pods-MeuPet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeuPet.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeuPet/Pods-MeuPet.release.xcconfig"; sourceTree = "<group>"; };
 		C21DD6E01FDC1AB500E788F0 /* AgendaDetalheViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaDetalheViewController.swift; sourceTree = "<group>"; };
-		C21DD6E21FDC1ADA00E788F0 /* AgendaDetalheStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AgendaDetalheStoryboard.storyboard; sourceTree = "<group>"; };
 		C281A76B1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendamentoCollectionViewCell.swift; sourceTree = "<group>"; };
 		C281A78B1FD3004600A642FA /* AgendaDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaDataSource.swift; sourceTree = "<group>"; };
 		C28FF2261FC9DFA5007AD80E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -170,9 +168,7 @@
 				C281A76B1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift */,
 				C281A78B1FD3004600A642FA /* AgendaDataSource.swift */,
 				E87476BB1FD314FE0078F731 /* AdicionaAgendaController.swift */,
-				E8E954081FD3223200E22799 /* PetDataManager.swift */,
 				C21DD6E01FDC1AB500E788F0 /* AgendaDetalheViewController.swift */,
-				C21DD6E21FDC1ADA00E788F0 /* AgendaDetalheStoryboard.storyboard */,
 				E8E954081FD3223200E22799 /* PetDataManager.swift */,
 				C2E97B021FDBFA2400584696 /* DetalhePetController.swift */,
 				C2E97B041FDC08D100584696 /* DoacaoCell.swift */,
@@ -251,7 +247,6 @@
 				E84019CE1FC9C9DE004BD2C8 /* Assets.xcassets in Resources */,
 				C2ADD72F1FD304D300C8B75E /* Adocao.storyboard in Resources */,
 				C2ADD72D1FD302DA00C8B75E /* Login.storyboard in Resources */,
-				C21DD6E31FDC1ADA00E788F0 /* AgendaDetalheStoryboard.storyboard in Resources */,
 				E84019C91FC9C9DE004BD2C8 /* Main.storyboard in Resources */,
 				C2ADD7311FD30D7700C8B75E /* Pet.storyboard in Resources */,
 			);

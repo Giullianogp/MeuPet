@@ -25,7 +25,14 @@ class PetDataManager: NSObject {
     override init() {
         super.init()
         
+       Consultar()
+    }
+    
+    func Consultar()
+    {
         Alamofire.request("https://meupetapp.azurewebsites.net/api/pet/getall2").responseJSON { response in
+            
+            self.pets = [Pet]()
             
             if let json = response.result.value as? [[String: Any]] {
                 
@@ -37,6 +44,11 @@ class PetDataManager: NSObject {
             }
             self.delegate?.done()
         }
+    }
+    
+    func Reload()
+    {
+        Consultar()
     }
 
 }
