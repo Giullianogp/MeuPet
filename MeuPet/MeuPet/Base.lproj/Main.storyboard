@@ -266,7 +266,6 @@
                     <connections>
                         <outlet property="agendamentoCollectionView" destination="5JH-qr-eOW" id="UmG-IM-Cer"/>
                         <outlet property="petView" destination="bbH-fy-4Bl" id="frU-Vw-zDE"/>
-                        <segue destination="SWI-cF-qPY" kind="show" identifier="segueAgendaDetalhe" id="U9a-gE-lEs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D6r-eK-mAz" userLabel="First Responder" sceneMemberID="firstResponder"/>
