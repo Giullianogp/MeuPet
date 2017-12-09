@@ -25,43 +25,18 @@ class PetDataManager: NSObject {
     override init() {
         super.init()
         
-        getPetsAPI()
-    }
-    
-    
-    func getPetsAPI(){
         Alamofire.request("https://meupetapp.azurewebsites.net/api/pet/getall2").responseJSON { response in
             
-            print("Request: \(String(describing: response.request))")   // original url request
-            print("Response: \(String(describing: response.response))") // http url response
-            //print("Result: \(response.result.value)") // response serialization result
-
-            
-            if let json = response.result.value  as? [String: Any],
-                let results = json[""] as? [[String: Any]] {
+            if let json = response.result.value as? [[String: Any]] {
                 
-                for data in results {
+                for data in json {
                     self.pets.append(Pet(data: data))
                 }
                 
                 print("JSON: \(self.pets)")
             }
-            
             self.delegate?.done()
-            
         }
-        
-//             
     }
-    
-    
-    func getPet(at index: Int) -> Pet {
-        print("Tamanho: \(self.pets.count) Index: \(index)")
-        if (index == self.pets.count - 1) {
-            page = page + 1
-            getPetsAPI()
-        }
-        
-        return self.pets[index]
-    }
+
 }

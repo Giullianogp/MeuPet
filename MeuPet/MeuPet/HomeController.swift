@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import Alamofire
 
 class HomeController: UIViewController, UICollectionViewDataSource,UICollectionViewDelegate , AsyncDelegate  {
     
@@ -17,6 +16,11 @@ class HomeController: UIViewController, UICollectionViewDataSource,UICollectionV
     var agendaDataSource = AgendaDataSource()
     var dataManager = PetDataManager()
     
+    var gradient: CAGradientLayer!
+    
+    @IBAction func newClick(_ sender: Any) {
+         performSegue(withIdentifier: "petNovo", sender: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +35,15 @@ class HomeController: UIViewController, UICollectionViewDataSource,UICollectionV
         self.petView.dataSource = self
         self.petView.delegate = self
 
+        
+        gradient = CAGradientLayer()
+        gradient.colors = [UIColor(hex: "2FB0EB").cgColor, UIColor(hex: "FFFFFF").cgColor]
+        self.view.layer.insertSublayer(gradient, at: 0)
     }
-
+    
+    override func viewDidLayoutSubviews() {
+        gradient.frame = self.view.bounds
+    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
@@ -42,7 +53,7 @@ class HomeController: UIViewController, UICollectionViewDataSource,UICollectionV
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "petCell", for: indexPath) as! PetCollectionViewCell
-            cell.pet = self.dataManager.getPet(at: indexPath.row)
+            cell.pet = self.dataManager.pets[indexPath.row]
             return cell
         }
     }
@@ -63,7 +74,7 @@ class HomeController: UIViewController, UICollectionViewDataSource,UICollectionV
     {
         if collectionView == petView {
 
-            performSegue(withIdentifier: "detalhePet", sender: indexPath.row)
+            performSegue(withIdentifier: "petDetalhe", sender: indexPath.row)
         }
     }
 
@@ -74,41 +85,14 @@ class HomeController: UIViewController, UICollectionViewDataSource,UICollectionV
     }
 
     
-    func consultaPet(){
     
-    
-//    Alamofire.request("https://meuapp.azurewebsites.net/api/usuario/logar", method: .get)
-//        .authenticate(user: "admin", password: "123")
-//        .responseJSON { response  in
-//    if (response.result.error == nil){
-//    
-//    print("Request: \(String(describing: response.request))")   // original url request
-//    print("Response: \(String(describing: response.response))") // http url response
-//    print("Result: \(response.result)")                         // response serialization result
-//    
-//    if let json = response.result.value  as? [String: Any],
-//    let results = json["results"] as? [[String: Any]] {
-//    
-//    for data in results {
-//        UserManager.shared.user = Usuario(data: data)
-//    }
-    
-        
-    
-    }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let detail = segue.destination as? DetalhePetController, segue.identifier == "petDetalhe" {
+            if let index = sender as? Int {
+                detail.pet =  self.dataManager.pets[index]
+            }
+        }
     }
-    */
-        
-        
 }
 
 
