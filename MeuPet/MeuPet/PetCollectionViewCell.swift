@@ -28,4 +28,12 @@ class PetCollectionViewCell: UICollectionViewCell {
             }
         }
     }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.imagePet.layer.cornerRadius = self.imagePet.frame.size.width / 2;
+        self.imagePet.layer.masksToBounds = true;
+    }
+
 }

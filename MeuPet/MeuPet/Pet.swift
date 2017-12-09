@@ -10,10 +10,12 @@ import UIKit
 
 class Pet {
     
-    var PetId : Int?
-    var Nome : String?
-    var ImageUrl : String?
-    var Nascimento : String?
+    var PetId : Int!
+    var Nome : String!
+    var ImageUrl : String!
+    var Nascimento : String!
+    var Peso : String!
+    var Raca : String!
 
     init() {
     }
@@ -21,10 +23,13 @@ class Pet {
     convenience init(data: [String: Any]) {
         self.init()
         
-        self.PetId = data["PetId"] as? Int ?? 0
-        self.Nome = data["Nome"] as? String ?? ""
-        self.ImageUrl = data["ImageUrl"] as? String ?? ""
-        self.Nascimento = data["Nascimento"] as? String ?? ""
+        self.PetId = data["petId"] as? Int ?? 0
+        self.Nome = data["nome"] as? String ?? ""
+        self.ImageUrl = data["imageUrl"] as? String ?? ""
+        self.Nascimento = data["nascimento"] as? String ?? ""
+        self.Peso = data["peso"] as? String ?? ""
+        self.Raca = data["raca"] as? String ?? ""
+
     }
 
 }

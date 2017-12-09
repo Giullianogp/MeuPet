@@ -10,7 +10,7 @@ import UIKit
 
 class AgendaDetalheViewController: UIViewController {
     
-    //var agenda :Agenda
+    var agenda: Agenda!
     
     @IBOutlet weak var imgPet: UIImageView!
     

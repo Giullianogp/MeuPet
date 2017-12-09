@@ -22,6 +22,11 @@
 		C2ADD72D1FD302DA00C8B75E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2ADD72C1FD302DA00C8B75E /* Login.storyboard */; };
 		C2ADD72F1FD304D300C8B75E /* Adocao.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2ADD72E1FD304D300C8B75E /* Adocao.storyboard */; };
 		C2ADD7311FD30D7700C8B75E /* Pet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2ADD7301FD30D7700C8B75E /* Pet.storyboard */; };
+		C2E97B031FDBFA2400584696 /* DetalhePetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E97B021FDBFA2400584696 /* DetalhePetController.swift */; };
+		C2E97B051FDC08D100584696 /* DoacaoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E97B041FDC08D100584696 /* DoacaoCell.swift */; };
+		C2E97B071FDC094400584696 /* Doacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E97B061FDC094400584696 /* Doacao.swift */; };
+		C2E97B091FDC124C00584696 /* DoacaoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E97B081FDC124C00584696 /* DoacaoDataManager.swift */; };
+		C2E97B0B1FDC1C7800584696 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E97B0A1FDC1C7800584696 /* Color.swift */; };
 		E84019C41FC9C9DE004BD2C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84019C31FC9C9DE004BD2C8 /* AppDelegate.swift */; };
 		E84019C61FC9C9DE004BD2C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84019C51FC9C9DE004BD2C8 /* ViewController.swift */; };
 		E84019C91FC9C9DE004BD2C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84019C71FC9C9DE004BD2C8 /* Main.storyboard */; };
@@ -65,6 +70,11 @@
 		C2ADD72C1FD302DA00C8B75E /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		C2ADD72E1FD304D300C8B75E /* Adocao.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Adocao.storyboard; sourceTree = "<group>"; };
 		C2ADD7301FD30D7700C8B75E /* Pet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Pet.storyboard; sourceTree = "<group>"; };
+		C2E97B021FDBFA2400584696 /* DetalhePetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalhePetController.swift; sourceTree = "<group>"; };
+		C2E97B041FDC08D100584696 /* DoacaoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoacaoCell.swift; sourceTree = "<group>"; };
+		C2E97B061FDC094400584696 /* Doacao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Doacao.swift; sourceTree = "<group>"; };
+		C2E97B081FDC124C00584696 /* DoacaoDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoacaoDataManager.swift; sourceTree = "<group>"; };
+		C2E97B0A1FDC1C7800584696 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		E84019C01FC9C9DE004BD2C8 /* MeuPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeuPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E84019C31FC9C9DE004BD2C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E84019C51FC9C9DE004BD2C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +125,7 @@
 				C2ADD7261FD2DEA000C8B75E /* Usuario.swift */,
 				C2ADD72A1FD2F4F700C8B75E /* UserManager.swift */,
 				C2ADD7281FD2E0AD00C8B75E /* Agenda.swift */,
+				C2E97B061FDC094400584696 /* Doacao.swift */,
 			);
 			name = Entidades;
 			sourceTree = "<group>";
@@ -162,6 +173,11 @@
 				E8E954081FD3223200E22799 /* PetDataManager.swift */,
 				C21DD6E01FDC1AB500E788F0 /* AgendaDetalheViewController.swift */,
 				C21DD6E21FDC1ADA00E788F0 /* AgendaDetalheStoryboard.storyboard */,
+				E8E954081FD3223200E22799 /* PetDataManager.swift */,
+				C2E97B021FDBFA2400584696 /* DetalhePetController.swift */,
+				C2E97B041FDC08D100584696 /* DoacaoCell.swift */,
+				C2E97B081FDC124C00584696 /* DoacaoDataManager.swift */,
+				C2E97B0A1FDC1C7800584696 /* Color.swift */,
 			);
 			path = MeuPet;
 			sourceTree = "<group>";
@@ -311,13 +327,18 @@
 				E84019DB1FC9D1DC004BD2C8 /* DoacaoController.swift in Sources */,
 				C2ADD7251FD2DE9000C8B75E /* Pet.swift in Sources */,
 				C21DD6E11FDC1AB500E788F0 /* AgendaDetalheViewController.swift in Sources */,
+				C2E97B031FDBFA2400584696 /* DetalhePetController.swift in Sources */,
 				E84019D91FC9D17A004BD2C8 /* HomeController.swift in Sources */,
 				E84019C61FC9C9DE004BD2C8 /* ViewController.swift in Sources */,
 				C2ADD72B1FD2F4F700C8B75E /* UserManager.swift in Sources */,
 				E84019CC1FC9C9DE004BD2C8 /* MeuPet.xcdatamodeld in Sources */,
 				C28FF22B1FC9E7AB007AD80E /* PetCollectionViewCell.swift in Sources */,
+				C2E97B091FDC124C00584696 /* DoacaoDataManager.swift in Sources */,
+				C2E97B0B1FDC1C7800584696 /* Color.swift in Sources */,
+				C2E97B071FDC094400584696 /* Doacao.swift in Sources */,
 				C2ADD7271FD2DEA000C8B75E /* Usuario.swift in Sources */,
 				E87476BC1FD314FE0078F731 /* AdicionaAgendaController.swift in Sources */,
+				C2E97B051FDC08D100584696 /* DoacaoCell.swift in Sources */,
 				C2ADD7291FD2E0AD00C8B75E /* Agenda.swift in Sources */,
 				E84019C41FC9C9DE004BD2C8 /* AppDelegate.swift in Sources */,
 			);
