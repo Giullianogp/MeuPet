@@ -31,5 +31,17 @@ class Pet {
         self.Raca = data["raca"] as? String ?? ""
 
     }
+    
+//    func toDictionary() -> [String : String]
+//    {
+//        return [
+//            "nome": nomeView.text ?? "",
+//            "imageUrl": "https://meupetblob.blob.core.windows.net/pets/image.png",
+//            "peso" : pesoView.text ?? "",
+//            "raca" : racaView.text ?? "",
+//            "nascimento" : nascimentoView.text ?? ""
+//        ]
+//        
+//    }
 
 }

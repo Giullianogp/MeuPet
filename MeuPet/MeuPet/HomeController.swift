@@ -37,7 +37,9 @@ class HomeController: UIViewController, UICollectionViewDataSource,UICollectionV
 
         
         gradient = CAGradientLayer()
-        gradient.colors = [UIColor(hex: "2FB0EB").cgColor, UIColor(hex: "FFFFFF").cgColor]
+        gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
+        gradient.endPoint = CGPoint(x: 0.0, y: 2.0)
+        gradient.colors = [UIColor(hex: "2F3D68").cgColor, UIColor(hex: "2F3D68").cgColor]
         self.view.layer.insertSublayer(gradient, at: 0)
     }
     
@@ -91,6 +93,13 @@ class HomeController: UIViewController, UICollectionViewDataSource,UICollectionV
             if let index = sender as? Int {
                 detail.pet =  self.dataManager.pets[index]
             }
+        }
+    }
+    
+    @IBAction func salvarPetUnwind(segue: UIStoryboardSegue)
+    {
+        if segue.identifier == "petSalvar"{
+            dataManager.Reload()
         }
     }
 }
