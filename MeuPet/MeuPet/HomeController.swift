@@ -89,11 +89,11 @@ class HomeController: UIViewController, UICollectionViewDataSource,UICollectionV
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let detail = segue.destination as? DetalhePetController, segue.identifier == "petDetalhe" {
+        if let detail = segue.destination as? PetAgendaViewController, segue.identifier == "petDetalhe" {
             if let index = sender as? Int {
                 detail.pet =  self.dataManager.pets[index]
             }
-        }
+        } 
     }
     
     @IBAction func salvarPetUnwind(segue: UIStoryboardSegue)
