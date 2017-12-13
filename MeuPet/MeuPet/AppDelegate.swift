@@ -19,14 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let qual = 1
+        //let qual = 1
         
         var vc: UIViewController
-        if qual == 1 {
-            vc = UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController()!
-        } else {
+//        if qual == 1 {
+//            vc = UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController()!
+//        } else {
             vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!
-        }
+        //}
         
         window = UIWindow()
         window?.rootViewController = vc

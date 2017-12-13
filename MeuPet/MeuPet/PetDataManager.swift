@@ -30,7 +30,7 @@ class PetDataManager: NSObject {
     
     func Consultar()
     {
-        Alamofire.request("https://meupetapp.azurewebsites.net/api/pet/getall2").responseJSON { response in
+        Alamofire.request("https://meupetapp.azurewebsites.net/api/pet/getall").responseJSON { response in
             
             self.pets = [Pet]()
             

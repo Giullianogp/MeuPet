@@ -92,6 +92,7 @@ class HomeController: UIViewController, UICollectionViewDataSource,UICollectionV
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+<<<<<<< HEAD
        
             print("clicou")
             
@@ -100,6 +101,13 @@ class HomeController: UIViewController, UICollectionViewDataSource,UICollectionV
             }
         
         
+=======
+        if let detail = segue.destination as? PetAgendaViewController, segue.identifier == "petDetalhe" {
+            if let index = sender as? Int {
+                detail.pet =  self.dataManager.pets[index]
+            }
+        } 
+>>>>>>> ea079270c14d4617ef2f9df3eed85afb83fcd2a0
     }
     
     @IBAction func salvarPetUnwind(segue: UIStoryboardSegue)
