@@ -92,15 +92,13 @@ class HomeController: UIViewController, UICollectionViewDataSource,UICollectionV
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueAgendaDetalhe"
-        {
-            
+       
             print("clicou")
             
             if let destination = segue.destination as? AgendaDetalheViewController {
                 destination.agenda  = self.agenda
             }
-        }
+        
         
     }
     
