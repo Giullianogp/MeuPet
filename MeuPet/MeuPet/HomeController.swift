@@ -15,6 +15,8 @@ class HomeController: UIViewController, UICollectionViewDataSource,UICollectionV
     
     var agendaDataSource = AgendaDataSource()
     var dataManager = PetDataManager()
+    private var agenda :Agenda!
+
     
     var gradient: CAGradientLayer!
     
@@ -52,6 +54,7 @@ class HomeController: UIViewController, UICollectionViewDataSource,UICollectionV
         if collectionView == agendamentoCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "agendaViewCell", for: indexPath) as! AgendamentoCollectionViewCell
             cell.agenda = self.agendaDataSource.data[indexPath.row]
+            self.agenda = cell.agenda
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "petCell", for: indexPath) as! PetCollectionViewCell
@@ -89,11 +92,13 @@ class HomeController: UIViewController, UICollectionViewDataSource,UICollectionV
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
         if let detail = segue.destination as? PetAgendaViewController, segue.identifier == "petDetalhe" {
             if let index = sender as? Int {
                 detail.pet =  self.dataManager.pets[index]
             }
         } 
+
     }
     
     @IBAction func salvarPetUnwind(segue: UIStoryboardSegue)

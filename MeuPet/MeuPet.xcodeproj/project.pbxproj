@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ABEAA6097EBF1726DF8FDA13 /* Pods_MeuPet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44799ADA85BDD13C2217888D /* Pods_MeuPet.framework */; };
+		C21DD6E11FDC1AB500E788F0 /* AgendaDetalheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21DD6E01FDC1AB500E788F0 /* AgendaDetalheViewController.swift */; };
 		C281A76C1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281A76B1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift */; };
 		C281A78C1FD3004600A642FA /* AgendaDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281A78B1FD3004600A642FA /* AgendaDataSource.swift */; };
 		C28FF2271FC9DFA5007AD80E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28FF2261FC9DFA5007AD80E /* LoginViewController.swift */; };
@@ -22,6 +23,7 @@
 		C2E97B071FDC094400584696 /* Doacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E97B061FDC094400584696 /* Doacao.swift */; };
 		C2E97B091FDC124C00584696 /* DoacaoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E97B081FDC124C00584696 /* DoacaoDataManager.swift */; };
 		C2E97B0B1FDC1C7800584696 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E97B0A1FDC1C7800584696 /* Color.swift */; };
+		E81F51D81FE33FD000AA61C4 /* DetalheAgendaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81F51D71FE33FD000AA61C4 /* DetalheAgendaController.swift */; };
 		E84019C41FC9C9DE004BD2C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84019C31FC9C9DE004BD2C8 /* AppDelegate.swift */; };
 		E84019C61FC9C9DE004BD2C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84019C51FC9C9DE004BD2C8 /* ViewController.swift */; };
 		E84019C91FC9C9DE004BD2C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84019C71FC9C9DE004BD2C8 /* Main.storyboard */; };
@@ -31,7 +33,6 @@
 		E84019D91FC9D17A004BD2C8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84019D81FC9D17A004BD2C8 /* HomeController.swift */; };
 		E84019DB1FC9D1DC004BD2C8 /* DoacaoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84019DA1FC9D1DC004BD2C8 /* DoacaoController.swift */; };
 		E86C0BBB1FDF61270011D846 /* PetAgendaDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C0BBA1FDF61270011D846 /* PetAgendaDataManager.swift */; };
-		E87476BC1FD314FE0078F731 /* DetalheAgendaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87476BB1FD314FE0078F731 /* DetalheAgendaController.swift */; };
 		E8DCD7451FDF59780087640C /* PetAgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DCD7441FDF59780087640C /* PetAgendaViewController.swift */; };
 		E8E954091FD3223200E22799 /* PetDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E954081FD3223200E22799 /* PetDataManager.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		44799ADA85BDD13C2217888D /* Pods_MeuPet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeuPet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		760B6730DF76E61B1C8C1528 /* Pods-MeuPet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeuPet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeuPet/Pods-MeuPet.debug.xcconfig"; sourceTree = "<group>"; };
 		BAB3BBB52FA344A533523B5D /* Pods-MeuPet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeuPet.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeuPet/Pods-MeuPet.release.xcconfig"; sourceTree = "<group>"; };
+		C21DD6E01FDC1AB500E788F0 /* AgendaDetalheViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaDetalheViewController.swift; sourceTree = "<group>"; };
 		C281A76B1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendamentoCollectionViewCell.swift; sourceTree = "<group>"; };
 		C281A78B1FD3004600A642FA /* AgendaDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaDataSource.swift; sourceTree = "<group>"; };
 		C28FF2261FC9DFA5007AD80E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		C2E97B061FDC094400584696 /* Doacao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Doacao.swift; sourceTree = "<group>"; };
 		C2E97B081FDC124C00584696 /* DoacaoDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoacaoDataManager.swift; sourceTree = "<group>"; };
 		C2E97B0A1FDC1C7800584696 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		E81F51D71FE33FD000AA61C4 /* DetalheAgendaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalheAgendaController.swift; sourceTree = "<group>"; };
 		E84019C01FC9C9DE004BD2C8 /* MeuPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeuPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E84019C31FC9C9DE004BD2C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E84019C51FC9C9DE004BD2C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,7 +81,6 @@
 		E84019D81FC9D17A004BD2C8 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		E84019DA1FC9D1DC004BD2C8 /* DoacaoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoacaoController.swift; sourceTree = "<group>"; };
 		E86C0BBA1FDF61270011D846 /* PetAgendaDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetAgendaDataManager.swift; sourceTree = "<group>"; };
-		E87476BB1FD314FE0078F731 /* DetalheAgendaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalheAgendaController.swift; sourceTree = "<group>"; };
 		E8DCD7441FDF59780087640C /* PetAgendaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetAgendaViewController.swift; sourceTree = "<group>"; };
 		E8E954081FD3223200E22799 /* PetDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,7 +162,7 @@
 				C28FF22A1FC9E7AB007AD80E /* PetCollectionViewCell.swift */,
 				C281A76B1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift */,
 				C281A78B1FD3004600A642FA /* AgendaDataSource.swift */,
-				E87476BB1FD314FE0078F731 /* DetalheAgendaController.swift */,
+				C21DD6E01FDC1AB500E788F0 /* AgendaDetalheViewController.swift */,
 				E8E954081FD3223200E22799 /* PetDataManager.swift */,
 				C2E97B021FDBFA2400584696 /* DetalhePetController.swift */,
 				C2E97B041FDC08D100584696 /* DoacaoCell.swift */,
@@ -168,6 +170,7 @@
 				C2E97B0A1FDC1C7800584696 /* Color.swift */,
 				E8DCD7441FDF59780087640C /* PetAgendaViewController.swift */,
 				E86C0BBA1FDF61270011D846 /* PetAgendaDataManager.swift */,
+				E81F51D71FE33FD000AA61C4 /* DetalheAgendaController.swift */,
 			);
 			path = MeuPet;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				TargetAttributes = {
 					E84019BF1FC9C9DE004BD2C8 = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -310,10 +314,12 @@
 				C281A76C1FD2BC2500A642FA /* AgendamentoCollectionViewCell.swift in Sources */,
 				E8E954091FD3223200E22799 /* PetDataManager.swift in Sources */,
 				C28FF2271FC9DFA5007AD80E /* LoginViewController.swift in Sources */,
+				E81F51D81FE33FD000AA61C4 /* DetalheAgendaController.swift in Sources */,
 				C281A78C1FD3004600A642FA /* AgendaDataSource.swift in Sources */,
 				E8DCD7451FDF59780087640C /* PetAgendaViewController.swift in Sources */,
 				E84019DB1FC9D1DC004BD2C8 /* DoacaoController.swift in Sources */,
 				C2ADD7251FD2DE9000C8B75E /* Pet.swift in Sources */,
+				C21DD6E11FDC1AB500E788F0 /* AgendaDetalheViewController.swift in Sources */,
 				C2E97B031FDBFA2400584696 /* DetalhePetController.swift in Sources */,
 				E84019D91FC9D17A004BD2C8 /* HomeController.swift in Sources */,
 				E86C0BBB1FDF61270011D846 /* PetAgendaDataManager.swift in Sources */,
@@ -326,7 +332,6 @@
 				C2E97B071FDC094400584696 /* Doacao.swift in Sources */,
 				C2ADD7271FD2DEA000C8B75E /* Usuario.swift in Sources */,
 				C2E97B051FDC08D100584696 /* DoacaoCell.swift in Sources */,
-				E87476BC1FD314FE0078F731 /* DetalheAgendaController.swift in Sources */,
 				C2ADD7291FD2E0AD00C8B75E /* Agenda.swift in Sources */,
 				E84019C41FC9C9DE004BD2C8 /* AppDelegate.swift in Sources */,
 			);
@@ -454,6 +459,7 @@
 			baseConfigurationReference = 760B6730DF76E61B1C8C1528 /* Pods-MeuPet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MeuPet",
@@ -462,6 +468,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.senac.MeuPet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -471,6 +478,7 @@
 			baseConfigurationReference = BAB3BBB52FA344A533523B5D /* Pods-MeuPet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MeuPet",
