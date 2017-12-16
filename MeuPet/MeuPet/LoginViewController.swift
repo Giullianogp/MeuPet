@@ -18,11 +18,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var imgLogin: UIImageView!
     @IBOutlet weak var txtPassword: UITextField!
     var delegate: AsyncDelegate?
- 
-    @IBAction func LoginClick(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "segueLogin", sender: nil)
-
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,7 +89,7 @@ class LoginViewController: UIViewController {
         
         if (txtLogin.text?.isEmpty)! || (txtPassword.text?.isEmpty)! {
             messageInfo.text = "Preencha o email/senha"
-            return
+//            return
         } else {
             messageInfo.text = " "
         }

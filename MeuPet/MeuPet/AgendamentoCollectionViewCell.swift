@@ -19,16 +19,28 @@ class AgendamentoCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var lblHora :UILabel!
     
+    @IBOutlet weak var lblPetNome: UILabel!
+    
     var agenda: Agenda! {
         didSet  {
-            self.lblDescricao.text   = self.agenda.Descricao
-            self.lblEndereco.text    = self.agenda.Endereco
+            self.lblDescricao.text  = self.agenda.Descricao
+            self.lblEndereco.text   = self.agenda.Endereco
+            self.lblPetNome.text    = self.agenda.PetNome
             
-            //            let formatter = DateFormatter()
-            //            formatter.dateFormat = "dd/MM hh:mm"
-            //
-            //            let dateTimeString = formatter.string(from: self.agenda.DataHora)
-            //            dateTimeString = split(da)
+            let formatterHora = DateFormatter()
+            formatterHora.dateFormat = "HH:mm"
+            
+      
+            self.lblHora.text = formatterHora.string(from: self.agenda.DataHora2!)
+            
+            let formatterDia = DateFormatter()
+            formatterDia.dateFormat = "dd/MM"
+            
+           
+            self.lblDate.text = formatterDia.string(from: self.agenda.DataHora2!)
+
+            
+                //dd/MM
             
         }
     }    

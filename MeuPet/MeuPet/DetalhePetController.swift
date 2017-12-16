@@ -9,8 +9,10 @@
 import UIKit
 import AlamofireImage
 import Alamofire
+import ImagePicker
+import Lightbox
 
-class DetalhePetController: UIViewController {
+class DetalhePetController: UIViewController, ImagePickerDelegate {
 
     
     var pet: Pet!
@@ -22,6 +24,17 @@ class DetalhePetController: UIViewController {
     @IBOutlet weak var racaView: UITextField!
     @IBOutlet weak var nascimentoView: UITextField!
     
+    @IBAction func ImageClick(_ sender: UIButton) {
+     
+        
+       
+        
+        let imagePickerController = ImagePickerController()
+        imagePickerController.delegate = self
+        present(imagePickerController, animated: true, completion: nil)
+        
+        
+    }
     @IBAction func saveClick(_ sender: Any) {
         
         if pet == nil {
@@ -85,6 +98,30 @@ class DetalhePetController: UIViewController {
             }
         }
         
+    }
+    
+    func cancelButtonDidPress(_ imagePicker: ImagePickerController) {
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+        guard images.count > 0 else { return }
+        
+        let lightboxImages = images.map {
+            return LightboxImage(image: $0)
+        }
+        
+        let lightbox = LightboxController(images: lightboxImages, startIndex: 0)
+        imagePicker.present(lightbox, animated: true, completion: nil)
+    }
+    
+    func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+        imagePicker.dismiss(animated: true, completion: nil)
+        
+      
+        imageView.image = images[0]
+        self.imageView.layer.cornerRadius = self.imageView.frame.size.width / 2;
+        self.imageView.layer.masksToBounds = true;
     }
     
 }

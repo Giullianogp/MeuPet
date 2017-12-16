@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class AgendaDataSource: NSObject {
     
@@ -17,24 +18,20 @@ class AgendaDataSource: NSObject {
     override init() {
         super.init()
         
-        var dictionary = [String: Any]()
-        dictionary["Id"] = 4
-        dictionary["Descricao"] = "Vacina anti raiva. Dosagem 10mg"
-        dictionary["DataHora"] = Date()
-        dictionary["PetId"] = 1
-        dictionary["Endereco"] = "Rua Botafogo 520 - Menino Deus - Porto Alegre - RS"
-        
-        data.append(Agenda(data: dictionary))
-        
-        
-        var dictionary2 = [String: Any]()
-        dictionary2["Id"] = 5
-        dictionary2["Descricao"] = "Tosa + Banho"
-        dictionary2["DataHora"] = Date()
-        dictionary2["PetId"] = 1
-        dictionary2["Endereco"] = "Rua Botafogo 520 - Menino Deus - Porto Alegre - RS"
-        
-        data.append(Agenda(data: dictionary2))
+        Alamofire.request("https://meupetapp.azurewebsites.net/api/agenda/getproximas").responseJSON { response in
+            
+            self.data = [Agenda]()
+            
+            if let json = response.result.value as? [[String: Any]] {
+                
+                for agen in json {
+                    self.data.append(Agenda(data: agen))
+                }
+              
+            }
+            self.delegate?.done()
+        }
+
 
     
     

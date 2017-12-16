@@ -16,6 +16,8 @@ class Pet {
     var Nascimento : String!
     var Peso : String!
     var Raca : String!
+    var Agendas : [Agenda]!
+    
 
     init() {
     }
@@ -29,19 +31,15 @@ class Pet {
         self.Nascimento = data["nascimento"] as? String ?? ""
         self.Peso = data["peso"] as? String ?? ""
         self.Raca = data["raca"] as? String ?? ""
+        
+        self.Agendas = [Agenda]()
+        
+        if let agenda = data["agendas"] as? [[String: Any]] {
+            for evento in agenda {
+                self.Agendas.append(Agenda(data: evento))
+            }
+        }
 
     }
-    
-//    func toDictionary() -> [String : String]
-//    {
-//        return [
-//            "nome": nomeView.text ?? "",
-//            "imageUrl": "https://meupetblob.blob.core.windows.net/pets/image.png",
-//            "peso" : pesoView.text ?? "",
-//            "raca" : racaView.text ?? "",
-//            "nascimento" : nascimentoView.text ?? ""
-//        ]
-//        
-//    }
 
 }
